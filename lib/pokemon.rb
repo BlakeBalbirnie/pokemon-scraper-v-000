@@ -2,21 +2,17 @@ class Pokemon
 
   attr_accessor :name, :type, :db, :id
 
-  #@@all = []
+  @@all = []
 
-  #def initialize(db)
-    #@name = name
-    #@type = type
-    #@db = db
-    #@id = id
-  #end
+  def initialize(db)
+    @name = name
+    @type = type
+    @db = db
+    @id = id
+  end
 
-  #def self.all
-    #@@all
-  #end
-
-  def initialize(attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)}
+  def self.all
+    @@all
   end
 
   def self.save(name, type, db)
